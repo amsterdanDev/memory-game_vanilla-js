@@ -73,6 +73,7 @@ button {
   max-width: 350px;
   width: 100%;
   outline: none;
+  text-align: center;
 }
 .c-login__input-name:hover, .c-login__input-name:focus {
   border: 3px solid #ee665c;

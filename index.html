@@ -12,7 +12,7 @@
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/main-min.css">
   <!-- JavaScript -->
-  <script defer type="module" src="js/app.js"></script>
+  <script defer type="module" src="js/login.js"></script>
   <title>Jogo da memória - Arte CSS</title>
 </head>
 
@@ -20,16 +20,16 @@
 
   <div class="l-login">
 
-    <form class="c-login">
+    <form class="c-login" data-form="login">
       <div class="c-login__header">
         <img class="c-login__img" src="images/brain.png" alt="Icone de um cérebro">
         <h1 class="c-login__title">Jogo da Memória</h1>
         <p class="c-login__subtitle">E aí, me fala,<br> se lembra o que comeu hoje pela manhã?</p>
       </div>
       <div class="c-login__body">
-        <input class="c-login__input-name" type="text" placeholder="Digite seu nickname"
+        <input class="c-login__input-name" id="name" data-input="name" type="text" placeholder="Digite seu nickname"
           arial-label="Digite seu nickname">
-        <button class="c-login__button-submit" type="submit" disabled>Jogar</button>
+        <button class="c-login__button-submit" type="submit" data-button="play" disabled>Jogar</button>
       </div>
     </form>
 
