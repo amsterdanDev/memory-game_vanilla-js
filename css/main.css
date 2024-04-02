@@ -7,7 +7,10 @@
   box-sizing: border-box;
 }
 
+html,
 body {
+  height: 100%;
+  width: 100%;
   font-family: "Press Start 2P", system-ui;
   color: #333;
 }
@@ -39,6 +42,15 @@ button {
   height: 100svh;
   display: grid;
   place-items: center;
+}
+
+.l-cards-game {
+  margin-inline: auto;
+  max-width: 50rem;
+  background-color: rgb(100, 100, 206);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
 }
 
 .c-login {
@@ -97,4 +109,34 @@ button {
   background-color: #eee;
   cursor: inherit;
   color: #aaa;
+}
+
+.c-card-game {
+  background-color: rgb(216, 89, 89);
+}
+.c-card-game__content {
+  aspect-ratio: 3/4;
+  transform-style: preserve-3d;
+  transition: transform 400ms ease;
+  display: grid;
+}
+.c-card-game:hover .c-card-game__content {
+  transform: rotateY(180deg);
+}
+.c-card-game__face {
+  grid-row: 1;
+  grid-column: 1;
+  border: 2px solid #39813a;
+  border-radius: 0.4rem;
+  background-size: cover;
+  background-position: center;
+  backface-visibility: hidden;
+  height: 100%;
+}
+.c-card-game__face--front {
+  background-image: url("/images/beth.png");
+  transform: rotateY(180deg);
+}
+.c-card-game__face--back {
+  background-image: url("/images/back.png");
 }/*# sourceMappingURL=main.css.map */

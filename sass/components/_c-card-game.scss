@@ -1,0 +1,38 @@
+@use '../base/' as *;
+
+.c-card-game {
+  background-color: rgb(216, 89, 89);
+
+  &__content {
+    aspect-ratio: 3 / 4;
+    transform-style: preserve-3d;
+    transition: transform 400ms ease;
+
+    display: grid;
+  }
+
+  &:hover &__content {
+    transform: rotateY(180deg);
+  }
+
+  &__face {
+    grid-row: 1;
+    grid-column: 1;
+
+    border: 2px solid $border-clr-primary;
+    border-radius: .4rem;
+    background-size: cover;
+    background-position: center;
+    backface-visibility: hidden;
+    height: 100%;
+  }
+
+  &__face--front {
+    background-image: url('/images/beth.png');
+    transform: rotateY(180deg);
+  }
+
+  &__face--back {
+    background-image: url('/images/back.png');
+  }
+}

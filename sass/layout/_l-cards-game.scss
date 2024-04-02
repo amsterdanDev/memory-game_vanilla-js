@@ -1,0 +1,9 @@
+.l-cards-game {
+  margin-inline: auto;
+  max-width: 50rem;
+  background-color: rgb(100, 100, 206);
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
