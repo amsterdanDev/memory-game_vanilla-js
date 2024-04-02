@@ -8,8 +8,8 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
+  font-family: "Press Start 2P", system-ui;
+  color: #333;
 }
 
 img {
@@ -23,6 +23,77 @@ li {
 }
 
 a {
-  color: black;
+  color: #333;
   text-decoration: none;
+}
+
+input,
+button {
+  height: 2.5rem;
+  color: #333;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 1rem;
+}
+
+.l-login {
+  height: 100svh;
+  display: grid;
+  place-items: center;
+}
+
+.c-login {
+  padding: 2rem;
+}
+.c-login__header {
+  text-align: center;
+}
+.c-login__img {
+  display: inline;
+  width: 10rem;
+}
+.c-login__title {
+  font-size: 1.5rem;
+  margin-block: 1rem 1.5rem;
+}
+.c-login__subtitle {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.c-login__body {
+  margin-top: 3rem;
+  display: grid;
+  gap: 1rem;
+  place-items: center;
+}
+.c-login__input-name {
+  padding: 1rem;
+  border: 2px solid #333;
+  border-radius: 0.5rem;
+  height: 3.5rem;
+  max-width: 350px;
+  width: 100%;
+  outline: none;
+}
+.c-login__input-name:hover, .c-login__input-name:focus {
+  border: 3px solid #ee665c;
+}
+.c-login__button-submit {
+  border: 2px solid #ee665c;
+  border-radius: 0.5rem;
+  background-color: #ee665c;
+  height: 3.5rem;
+  max-width: 350px;
+  width: 100%;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+}
+.c-login__button-submit:hover, .c-login__button-submit:focus {
+  border: 3px solid #333;
+}
+.c-login__button-submit:disabled {
+  border: 2px solid #eee;
+  background-color: #eee;
+  cursor: inherit;
+  color: #aaa;
 }/*# sourceMappingURL=main.css.map */

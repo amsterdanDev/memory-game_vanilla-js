@@ -1,0 +1,38 @@
+@use 'variables.scss' as *;
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $ff-primary;
+  color: $clr-font-primary;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: $clr-font-primary;
+  text-decoration: none;
+}
+
+input,
+button {
+  height: 2.5rem;
+  color: $clr-font-primary;
+  font-family: $ff-primary;
+  font-size: 1rem;
+}

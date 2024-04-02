@@ -1,0 +1,71 @@
+@use '../base/' as *;
+
+.c-login {
+  padding: 2rem;
+
+  &__header {
+    text-align: center;
+  }
+
+  &__img {
+    display: inline;
+    width: 10rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-block: 1rem 1.5rem;
+  }
+
+  &__subtitle {
+    font-size: .9rem;
+    line-height: 1.4;
+  }
+
+  &__body {
+    margin-top: 3rem;
+
+    display: grid;
+    gap: 1rem;
+    place-items: center;
+  }
+
+  &__input-name {
+    padding: 1rem;
+    border: 2px solid $clr-font-primary;
+    border-radius: 0.5rem;
+    height: 3.5rem;
+    max-width: 350px;
+    width: 100%;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      border: 3px solid $bg-primary;
+    }
+  }
+
+  &__button-submit {
+    border: 2px solid $bg-primary;
+    border-radius: 0.5rem;
+    background-color: $bg-primary;
+    height: 3.5rem;
+    max-width: 350px;
+    width: 100%;
+    cursor: pointer;
+    color: $clr-white;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      border: 3px solid $clr-font-primary;
+    }
+
+    &:disabled {
+      border: 2px solid $bg-btn-disabled;
+      background-color: $bg-btn-disabled;
+      cursor: inherit;
+      color: $clr-btn-disabled;
+    }
+  }
+}
