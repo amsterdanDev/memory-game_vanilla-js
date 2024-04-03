@@ -44,9 +44,24 @@ button {
   place-items: center;
 }
 
+.l-game {
+  padding-block: 1.3rem 2rem;
+  padding-inline: 1rem;
+  background-color: bisque;
+  background-image: url(/images/bg.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
 .l-cards-game {
   margin-inline: auto;
   max-width: 75rem;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   gap: 1rem;
@@ -108,6 +123,16 @@ button {
   background-color: #eee;
   cursor: inherit;
   color: #aaa;
+}
+
+.c-header {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  max-width: 75rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .c-card-game__content {

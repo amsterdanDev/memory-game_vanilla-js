@@ -13,7 +13,9 @@ const characters = [
   'scroopy'
 ]
 
-const cardsContainer = document.querySelector('[data-js="cardsContainer"]')
+const cardsContainer = document.querySelector('[data-element="cardsContainer"]')
+const playerContainer = document.querySelector('[data-element="player"]')
+const timeNumberContainer = document.querySelector('[data-element="time"]')
 
 let firstCard = ''
 let secondCard = ''
