@@ -46,10 +46,9 @@ button {
 
 .l-cards-game {
   margin-inline: auto;
-  max-width: 50rem;
-  background-color: rgb(100, 100, 206);
+  max-width: 75rem;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   gap: 1rem;
 }
 
@@ -111,21 +110,19 @@ button {
   color: #aaa;
 }
 
-.c-card-game {
-  background-color: rgb(216, 89, 89);
-}
 .c-card-game__content {
   aspect-ratio: 3/4;
   transform-style: preserve-3d;
   transition: transform 400ms ease;
   display: grid;
 }
-.c-card-game:hover .c-card-game__content {
+.c-card-game__content.revel-card {
   transform: rotateY(180deg);
 }
 .c-card-game__face {
   grid-row: 1;
   grid-column: 1;
+  pointer-events: none;
   border: 2px solid #39813a;
   border-radius: 0.4rem;
   background-size: cover;
@@ -134,8 +131,11 @@ button {
   height: 100%;
 }
 .c-card-game__face--front {
-  background-image: url("/images/beth.png");
   transform: rotateY(180deg);
+  transition: filter 400ms ease;
+}
+.c-card-game__content.disabled-card .c-card-game__face--front {
+  filter: grayscale(1) opacity(0.7);
 }
 .c-card-game__face--back {
   background-image: url("/images/back.png");
