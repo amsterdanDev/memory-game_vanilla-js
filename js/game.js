@@ -19,6 +19,7 @@ const timeNumberContainer = document.querySelector('[data-element="time"]')
 
 let firstCard = ''
 let secondCard = ''
+let idInterval = 0
 
 const createElement = (tag, className) => {
   const element = document.createElement(tag)
@@ -56,6 +57,7 @@ const checkEndGame = () => {
   const disabledCards = document.querySelectorAll('.disabled-card')
 
   if (disabledCards.length === characters.length * 2) {
+    clearInterval(idInterval)
     alert('Fim de jogo!')
   }
 }
@@ -103,6 +105,20 @@ const revelCard = ({ target }) => {
   checkCards()
 }
 
+const formatTime = time => time < 10 ? `0${time}` : time
+
+const startTime = () => {
+  idInterval = setInterval(() => {
+    const currentTime = Number(timeNumberContainer.textContent)
+    timeNumberContainer.textContent = formatTime(currentTime + 1)
+  }, 1000)
+}
+
 cardsContainer.addEventListener('click', revelCard)
 
-loadGame()
+window.addEventListener('load', () => {
+  playerContainer.textContent = localStorage.getItem('player')
+
+  startTime()
+  loadGame()
+})
