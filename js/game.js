@@ -103,11 +103,16 @@ const checkCards = () => {
 
   setTimeout(() => {
     firstCard.classList.remove('revel-card')
-    secondCard.classList.remove('revel-card')
+    secondCard.classList.remove('revel-card')  
+  }, 600)
+
+  setTimeout(() => {
+    firstCard.style.pointerEvents = ''
+    secondCard.style.pointerEvents = ''
 
     firstCard = ''
     secondCard = ''
-  }, 600)
+  }, 800)
 }
 
 const revelCard = ({ target }) => {
@@ -116,10 +121,11 @@ const revelCard = ({ target }) => {
   if (!character) return null
   if (target.classList.value.includes('revel-card')) return null
 
+  target.style.pointerEvents = 'none'
+
   target.classList.add('revel-card')
 
   if (firstCard === '') return firstCard = target
-
 
   secondCard = target
   checkCards()
