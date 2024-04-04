@@ -1,6 +1,7 @@
 @use '../base/' as *;
 
 .c-card-game {
+  cursor: pointer;
 
   &__content {
     aspect-ratio: 3 / 4;

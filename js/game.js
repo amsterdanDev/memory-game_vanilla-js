@@ -14,6 +14,8 @@ const characters = [
 ]
 
 const nav = document.querySelector('[data-element="nav"]')
+const bestTimeNameContainer = document.querySelector('[data-bestTime="name"]')
+const bestTimeTimeContainer = document.querySelector('[data-bestTime="time"]')
 const playerContainer = document.querySelector('[data-element="player"]')
 const timeNumberContainer = document.querySelector('[data-element="time"]')
 const cardsContainer = document.querySelector('[data-element="cardsContainer"]')
@@ -60,6 +62,22 @@ const checkEndGame = () => {
 
   if (disabledCards.length === characters.length * 2) {
     clearInterval(idInterval)
+
+    const endGameDice = {
+      name: playerContainer.textContent,
+      time: currentTime
+    }
+
+    const bestTime = JSON.parse(localStorage.getItem('bestTime'))
+
+    if (bestTime) {
+      if (bestTime.time > endGameDice.time) {
+        localStorage.setItem('bestTime', JSON.stringify(endGameDice))
+      }
+    } else {
+      localStorage.setItem('bestTime', JSON.stringify(endGameDice))
+    }
+
     alert('Fim de jogo!')
   }
 }
@@ -106,8 +124,6 @@ const revelCard = ({ target }) => {
   secondCard = target
   checkCards()
 }
-
-const formatTime = time => time < 10 ? `0${time}` : time
 
 function fancyTimeFormat(duration) {
   // Hours, minutes and seconds
@@ -172,6 +188,11 @@ nav.addEventListener('click', navHandleClick)
 
 window.addEventListener('load', () => {
   playerContainer.textContent = localStorage.getItem('player')
+  const bestTime = JSON.parse(localStorage.getItem('bestTime'))
+  if (bestTime) {
+    bestTimeNameContainer.textContent = bestTime.name
+    bestTimeTimeContainer.textContent = fancyTimeFormat(bestTime.time)
+  }
 
   startTime()
   loadGame()

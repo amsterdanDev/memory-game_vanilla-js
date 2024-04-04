@@ -146,6 +146,11 @@ button {
   color: #aaa;
 }
 
+.c-nav {
+  display: flex;
+  gap: 1rem;
+}
+
 .c-nav__button {
   padding-inline: 1.25rem;
   border: 2px solid #ee665c;
@@ -188,6 +193,9 @@ button {
   align-items: center;
 }
 
+.c-card-game {
+  cursor: pointer;
+}
 .c-card-game__content {
   aspect-ratio: 3/4;
   transform-style: preserve-3d;
