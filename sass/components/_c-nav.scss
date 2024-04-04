@@ -1,0 +1,17 @@
+@use '../base/' as *;
+
+.c-nav__button {
+  padding-inline: 1.25rem;
+  border: 2px solid $bg-primary;
+  border-radius: .5rem;
+  background-color: $bg-primary;
+  height: 3.5rem;
+  cursor: pointer;
+  outline: none;
+  color: $clr-font-primary;
+
+  &:hover,
+  &:focus {
+    border: 3px solid $clr-font-primary;
+  }
+}

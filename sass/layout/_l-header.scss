@@ -1,0 +1,23 @@
+.l-header {
+  max-width: 75rem;
+  width: 100%;
+
+  display: grid;
+  grid-template-areas:
+    'nav  rank'
+    'info info';
+  gap: 2rem;
+}
+
+.l-header__nav {
+  grid-area: nav;
+}
+
+.l-header__rank {
+  grid-area: rank;
+  justify-self: end;
+}
+
+.l-header__player-info {
+  grid-area: info;
+}

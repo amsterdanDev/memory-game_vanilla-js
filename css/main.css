@@ -58,6 +58,27 @@ button {
   gap: 3rem;
 }
 
+.l-header {
+  max-width: 75rem;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "nav  rank" "info info";
+  gap: 2rem;
+}
+
+.l-header__nav {
+  grid-area: nav;
+}
+
+.l-header__rank {
+  grid-area: rank;
+  justify-self: end;
+}
+
+.l-header__player-info {
+  grid-area: info;
+}
+
 .l-cards-game {
   margin-inline: auto;
   max-width: 75rem;
@@ -125,11 +146,38 @@ button {
   color: #aaa;
 }
 
-.c-header {
+.c-nav__button {
+  padding-inline: 1.25rem;
+  border: 2px solid #ee665c;
+  border-radius: 0.5rem;
+  background-color: #ee665c;
+  height: 3.5rem;
+  cursor: pointer;
+  outline: none;
+  color: #333;
+}
+.c-nav__button:hover, .c-nav__button:focus {
+  border: 3px solid #333;
+}
+
+.c-rank {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 3.5rem;
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+.c-rank > * {
+  font-size: 1rem;
+}
+
+.c-player-info {
   padding: 1.7rem;
   background-color: rgba(255, 255, 255, 0.8);
-  max-width: 75rem;
-  width: 100%;
   font-size: 1.3rem;
   display: flex;
   justify-content: space-between;

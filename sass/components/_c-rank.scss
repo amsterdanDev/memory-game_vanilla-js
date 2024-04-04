@@ -1,0 +1,15 @@
+.c-rank {
+  padding: 2rem;
+  background-color: rgb(255 255 255 / .8);
+  height: 3.5rem;
+  width: max-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+
+  &>* {
+    font-size: 1rem;
+  }
+}

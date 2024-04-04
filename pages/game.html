@@ -18,21 +18,36 @@
 
 <body>
 
-  <main class="l-game">
-    <header class="c-header">
-      <div class="c-header__player" data-element="player">
-        <!-- JavaScript -->
+  <div class="l-game">
+    <header class="l-header">
+      <nav class="c-nav l-header__nav">
+        <a href="/index.html"><button class="c-nav__button">VOLTAR</button></a>
+        <button class="c-nav__button">PAUSAR</button>
+        <button class="c-nav__button">REINICIAR</button>
+      </nav>
+
+      <div class="c-rank l-header__rank">
+        <span class="c-rank__title">Melhor tempo:</span>
+        <span class="c-rank__name">Tiago</span>
+        <span class="c-rank__time">0:35</span>
       </div>
-      <div class="c-header__time">
-        Tempo:
-        <span class="c-header__time-number" data-element="time">00</span>
+
+      <div class="c-player-info l-header__player-info">
+        <div class="c-player-info__name" data-element="player">
+          <!-- JavaScript -->
+        </div>
+        <div class="c-player-info__time">
+          Tempo:
+          <span class="c-player-info__time-number" data-element="time">0:00</span>
+        </div>
       </div>
     </header>
 
-    <div class="l-cards-game" data-element="cardsContainer">
+    <main class="l-cards-game" data-element="cardsContainer">
       <!-- JavaScript -->
-    </div>
-  </main>
+    </main>
+
+  </div>
 
 </body>
 
