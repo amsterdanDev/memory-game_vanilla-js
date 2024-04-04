@@ -160,6 +160,10 @@ button {
   border: 3px solid #333;
 }
 
+.c-nav__button.return {
+  background-color: #5ff062;
+}
+
 .c-rank {
   padding: 2rem;
   background-color: rgba(255, 255, 255, 0.8);

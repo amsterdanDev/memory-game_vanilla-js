@@ -13,9 +13,10 @@ const characters = [
   'scroopy'
 ]
 
-const cardsContainer = document.querySelector('[data-element="cardsContainer"]')
+const nav = document.querySelector('[data-element="nav"]')
 const playerContainer = document.querySelector('[data-element="player"]')
 const timeNumberContainer = document.querySelector('[data-element="time"]')
+const cardsContainer = document.querySelector('[data-element="cardsContainer"]')
 
 let firstCard = ''
 let secondCard = ''
@@ -133,7 +134,41 @@ const startTime = () => {
   }, 1000)
 }
 
+const pauseGame = button => {
+  cardsContainer.style.pointerEvents = 'none'
+  cardsContainer.style.filter = 'opacity(.5) grayScale(1)'
+  clearInterval(idInterval)
+
+  button.textContent = 'RETORNAR'
+  button.classList.add('return')
+  button.dataset.button = 'return'
+}
+
+const returnGame = button => {
+  cardsContainer.style.pointerEvents = ''
+  cardsContainer.style.filter = ''
+
+  button.textContent = 'PAUSAR'
+  button.classList.remove('return')
+  button.dataset.button = 'pause'
+
+  startTime()
+}
+
+const restartGame = () => location.reload()
+
+const navHandleClick = ({ target }) => {
+  const dataTarget = target.dataset.button
+
+  if (dataTarget === 'restart') return restartGame()
+
+  if (dataTarget === 'pause') return pauseGame(target)
+
+  if (dataTarget === 'return') return returnGame(target)
+}
+
 cardsContainer.addEventListener('click', revelCard)
+nav.addEventListener('click', navHandleClick)
 
 window.addEventListener('load', () => {
   playerContainer.textContent = localStorage.getItem('player')
