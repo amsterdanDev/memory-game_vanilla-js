@@ -42,13 +42,15 @@ button {
   height: 100svh;
   display: grid;
   place-items: center;
+  background-image: url("/images/stardew_valley-background.png");
+  background-position: bottom;
 }
 
 .l-game {
   padding-block: 1.3rem 2rem;
   padding-inline: 1rem;
   background-color: bisque;
-  background-image: url(/images/bg.jpg);
+  background-image: url(/images/stardew_valley-background.png);
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -94,12 +96,13 @@ button {
 .c-login__header {
   text-align: center;
 }
-.c-login__img {
+.c-login__logo {
   display: inline;
-  width: 10rem;
+  max-width: 25rem;
+  margin-bottom: 1rem;
 }
 .c-login__title {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-block: 1rem 1.5rem;
 }
 .c-login__subtitle {
@@ -153,16 +156,17 @@ button {
 
 .c-nav__button {
   padding-inline: 1.25rem;
-  border: 2px solid #ee665c;
+  border: 3px solid #ee665c;
   border-radius: 0.5rem;
   background-color: #ee665c;
   height: 3.5rem;
   cursor: pointer;
   outline: none;
   color: #333;
+  transition: 300ms;
 }
 .c-nav__button:hover, .c-nav__button:focus {
-  border: 3px solid #333;
+  border-color: #333;
 }
 
 .c-nav__button.return {
@@ -209,7 +213,6 @@ button {
   grid-row: 1;
   grid-column: 1;
   pointer-events: none;
-  border: 2px solid #39813a;
   border-radius: 0.4rem;
   background-size: cover;
   background-position: center;
@@ -217,6 +220,7 @@ button {
   height: 100%;
 }
 .c-card-game__face--front {
+  background-repeat: no-repeat;
   transform: rotateY(180deg);
   transition: filter 400ms ease;
 }
@@ -224,5 +228,7 @@ button {
   filter: grayscale(1) opacity(0.7);
 }
 .c-card-game__face--back {
-  background-image: url("/images/back.png");
+  background-image: url("/images/back-card.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=main.css.map */

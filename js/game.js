@@ -1,16 +1,16 @@
 const characters = [
-  'beth',
-  'jerry',
-  'jessica',
-  'morty',
-  'pessoa-passaro',
-  'pickle-rick',
-  'rick',
-  'summer',
-  'meeseeks',
-  'scroopy',
-  'scroopy',
-  'scroopy'
+  'abigail',
+  'alex',
+  'elliott',
+  'emily',
+  'haley',
+  'harvey',
+  'leah',
+  'maru',
+  'penny',
+  'sam',
+  'sebastian',
+  'shane'
 ]
 
 const nav = document.querySelector('[data-element="nav"]')

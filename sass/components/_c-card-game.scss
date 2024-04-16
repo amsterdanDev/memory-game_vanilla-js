@@ -21,7 +21,7 @@
     grid-column: 1;
 
     pointer-events: none;
-    border: 2px solid $border-clr-primary;
+    // border: 2px solid $border-clr-primary;
     border-radius: .4rem;
     background-size: cover;
     background-position: center;
@@ -30,6 +30,7 @@
   }
 
   &__face--front {
+    background-repeat: no-repeat;
     transform: rotateY(180deg);
     transition: filter 400ms ease;
   }
@@ -39,6 +40,8 @@
   }
 
   &__face--back {
-    background-image: url('/images/back.png');
+    background-image:  url('/images/back-card.png');
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
