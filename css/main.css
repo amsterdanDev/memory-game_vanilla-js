@@ -120,20 +120,47 @@ button {
   border: 2px solid #333;
   border-radius: 0.5rem;
   height: 3.5rem;
-  max-width: 350px;
+  max-width: 400px;
   width: 100%;
   outline: none;
   text-align: center;
+  background-color: rgba(233, 233, 233, 0.7);
 }
 .c-login__input-name:hover, .c-login__input-name:focus {
+  background-color: rgb(233, 233, 233);
   border: 3px solid #ee665c;
+}
+.c-login__inputs-radios-wrapper {
+  display: flex;
+  gap: 1rem;
+  max-width: 400px;
+  width: 100%;
+}
+.c-login__label-level {
+  display: block;
+  background-color: rgba(233, 233, 233, 0.7);
+  border: 2px solid #333;
+  border-radius: 5px;
+  height: 2.5rem;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  display: grid;
+  place-items: center;
+}
+.c-login__label-level:hover, .c-login__label-level:focus {
+  background-color: rgb(233, 233, 233);
+  border-color: #ee665c;
+}
+.c-login__input-level {
+  display: none;
 }
 .c-login__button-submit {
   border: 2px solid #ee665c;
   border-radius: 0.5rem;
   background-color: #ee665c;
   height: 3.5rem;
-  max-width: 350px;
+  max-width: 400px;
   width: 100%;
   cursor: pointer;
   color: #fff;
