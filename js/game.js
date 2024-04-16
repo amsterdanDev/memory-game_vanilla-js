@@ -83,6 +83,8 @@ const checkEndGame = () => {
 }
 
 const checkCards = () => {
+  cardsContainer.style.pointerEvents = 'none'
+  
   const firstCharacter = firstCard.dataset.character
   const secondCharacter = secondCard.dataset.character
 
@@ -95,6 +97,8 @@ const checkCards = () => {
       firstCard = ''
       secondCard = ''
 
+      cardsContainer.style.pointerEvents = ''
+      
       checkEndGame()
     }, 600)
 
@@ -107,8 +111,7 @@ const checkCards = () => {
   }, 600)
 
   setTimeout(() => {
-    firstCard.style.pointerEvents = ''
-    secondCard.style.pointerEvents = ''
+    cardsContainer.style.pointerEvents = ''
 
     firstCard = ''
     secondCard = ''
@@ -120,8 +123,6 @@ const revelCard = ({ target }) => {
 
   if (!character) return null
   if (target.classList.value.includes('revel-card')) return null
-
-  target.style.pointerEvents = 'none'
 
   target.classList.add('revel-card')
 
