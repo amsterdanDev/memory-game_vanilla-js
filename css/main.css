@@ -120,7 +120,7 @@ button {
   border: 2px solid #333;
   border-radius: 0.5rem;
   height: 3.5rem;
-  max-width: 400px;
+  max-width: 430px;
   width: 100%;
   outline: none;
   text-align: center;
@@ -133,7 +133,7 @@ button {
 .c-login__inputs-radios-wrapper {
   display: flex;
   gap: 1rem;
-  max-width: 400px;
+  max-width: 430px;
   width: 100%;
 }
 .c-login__label-level {
@@ -148,7 +148,11 @@ button {
   display: grid;
   place-items: center;
 }
-.c-login__label-level:hover, .c-login__label-level:focus {
+.c-login__label-level:hover {
+  background-color: rgb(233, 233, 233);
+  border-color: #ee665c;
+}
+.c-login__label-level--active {
   background-color: rgb(233, 233, 233);
   border-color: #ee665c;
 }
@@ -160,7 +164,7 @@ button {
   border-radius: 0.5rem;
   background-color: #ee665c;
   height: 3.5rem;
-  max-width: 400px;
+  max-width: 430px;
   width: 100%;
   cursor: pointer;
   color: #fff;
